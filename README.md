@@ -10,7 +10,7 @@ TRIS - *Telegram Reddit Image Service* - is a webhooks bot for Telegram which de
 4. Possibly change subreddits in `all_subs` and `commands_to_subs`.
 5. Run the bot with `python bot.py`.
 
-For more information about how to set up a bot, see the official documentation:
-https://core.telegram.org/bots/
-https://core.telegram.org/bots/webhooks
-https://core.telegram.org/api
+For more information about how to set up a bot, see the official documentation:  
+https://core.telegram.org/bots/  
+https://core.telegram.org/bots/webhooks  
+https://core.telegram.org/api  
