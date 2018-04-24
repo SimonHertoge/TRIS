@@ -66,7 +66,7 @@ class ImageService:
     def get_post(self, sub):
         if len(self.cached_posts) == 0:
             r = requests.get('https://www.reddit.com/r/' + sub + '.json?count=10',
-                             headers={'User-agent': 'RedditImageBot'}).json()
+                             headers={'User-agent': 'TRIS'}).json()
             self.cached_posts = [post if post['kind'] == 't3' else None for post in r['data']['children']]
 
         return self.cached_posts.pop(random.randint(0, len(self.cached_posts)))
@@ -154,7 +154,7 @@ class ImageService:
 class StatsService:
 
     def __init__(self):
-        self.db = MySQLdb.connect(host='localhost', user='RedditImageBot', passwd='[PASSWORD]', db='stats')
+        self.db = MySQLdb.connect(host='localhost', user='TRIS', passwd='[PASSWORD]', db='stats')
         self.cur = self.db.cursor()
         atexit.register(self.exit_handler)
 
@@ -198,7 +198,7 @@ class StatsService:
             self.db.close()
 
 
-@app.route('/RedditImageBot/update', methods=['POST'])
+@app.route('/TRIS/update', methods=['POST'])
 def update():
     if request.headers['Content-Type'] == 'application/json':
         print(request.get_json())
@@ -241,7 +241,7 @@ def update():
 
 
 if __name__ == "__main__":
-    print("RedditImageBot started...")
+    print("TRIS started...")
     ps = ImageService()
     context = (imgsrv.CERT_PATH + 'fullchain.pem', imgsrv.CERT_PATH + 'privkey.pem')
     app.run(host='0.0.0.0', port=8443, ssl_context=context)
