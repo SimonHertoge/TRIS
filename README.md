@@ -1,6 +1,6 @@
 # TRIS
 
-TRIS - *Telegram Reddit Image Service** - is a webhooks bot for Telegram which delivers images and gifs from imgur, reddituploads, and gfycat as a response to (custom) commands. Subreddits can be customized in the script or chosen by the user. Also included is a simple rate limiter and stats manager, which can send a graph of number of requests by user.
+TRIS - *Telegram Reddit Image Service* - is a webhooks bot for Telegram which delivers images and gifs from imgur, reddituploads, and gfycat as a response to (custom) commands. Subreddits can be customized in the script or chosen by the user. Also included is a simple rate limiter and stats manager, which can send a graph of number of requests by user.
 
 ## Setup
 
